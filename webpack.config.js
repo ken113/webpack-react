@@ -12,8 +12,7 @@ config = {
         filename: 'bundle.js',
     },
     module: {
-        loaders: [
-        {
+        loaders: [{
             test: /\.jsx?$/,
             loader: 'babel',
 			exclude: /node_modules/,
@@ -21,10 +20,13 @@ config = {
 				presets: ['es2015', 'react']
 			}
 			
-        },
-        { test:/\.(png|jpg)$/, loader:'url?limit=2500' }
-
-        ],
+        },{
+            test: /\.json$/,
+            loader: 'json-loader'
+        },{
+          test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
+          loader: 'url-loader?limit=8192'
+        }],
 
     },
 	plugins: [

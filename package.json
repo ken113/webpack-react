@@ -17,9 +17,12 @@
     "css-loader": "^0.23.1",
     "style-loader": "^0.13.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
   },
   "author": "",
   "license": "ISC"
